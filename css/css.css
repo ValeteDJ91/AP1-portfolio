@@ -4,7 +4,7 @@
     --darker: #242038;
     --dark: #725AC1;
     --normal: #8D86C9;
-    --light: #CAC4CE;
+    --light: #c6bccd;
     --lighter: #F7ECE1;
 }
 
@@ -80,9 +80,14 @@ body {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    font-weight: 700;
-    text-decoration: underline;
+    font-weight: 500;
     font-size: 2.5em;
+}
+
+.accroche_title_keyword {
+    text-decoration: underline;
+    font-weight: 700;
+    color: var(--light);
 }
 
 .team_preview_container {
@@ -138,4 +143,59 @@ body {
 .team_preview_member_button:hover {
     transform: scale(1.05);
     cursor: pointer;
+}
+
+.competence_container {
+    padding-top: 20px;
+}
+
+.competence_title {
+    width: max-content;
+    margin: auto;
+    font-size: 2em;
+}
+
+.competence_table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    padding-top: 10px;
+    width: 85%;
+    margin: auto;
+}
+
+.competence_list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 0px 7vw;
+}
+
+.competence_list:nth-child(1) {
+    border-right: var(--darker) solid 1px;
+}
+
+.competence {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.competence_description {
+
+}
+
+.competence_star_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.competence_star {
+    height: 1em;
 }
