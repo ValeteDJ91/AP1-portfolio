@@ -18,7 +18,7 @@ body {
     background-color: var(--dark);
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -103,15 +103,23 @@ body {
     background-size: cover;
 }
 
+@media only screen and (max-width: 576px) {
+    .accroche {
+        height: 35vh;
+    }
+}
+
 .accroche_title {
     color: var(--lighter);
-    width: max-content;
+    width: 90%;
     margin: auto;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     font-weight: 500;
-    font-size: 2.6em;
+    font-size: 2.4em;
+    text-align: center;
+    line-height: 1.4em;
 }
 
 .accroche_title_keyword {
@@ -127,7 +135,10 @@ body {
 }
 
 .team_presentation_title {
-    margin: 0;
+    text-align: center;
+    margin: auto;
+    font-size: 2.3em;
+    line-height: 1.2em;
 }
 
 .team_presentation_text {
@@ -139,9 +150,10 @@ body {
 }
 
 .team_preview_title {
-    width: max-content;
+    text-align: center;
     margin: auto;
     font-size: 2.3em;
+    line-height: 1.2em;
 }
 
 .team_preview {
@@ -153,6 +165,8 @@ body {
     padding-top: 10px;
     width: 90%;
     margin: auto;
+    row-gap: 18px;
+    flex-wrap: wrap;
 }
 
 .team_preview_member {
@@ -160,6 +174,7 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
+    max-width: 250px;
 }
 
 .team_preview_member_name {
@@ -204,18 +219,24 @@ body {
 }
 
 .competence_title {
-    width: max-content;
+    text-align: center;
     margin: auto;
     font-size: 2.3em;
+    line-height: 1.2em;
 }
 
 .competence_table {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     overflow: hidden;
     padding-top: 10px;
     width: 85%;
     margin: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    column-gap: 7vw;
 }
 
 .competence_list {
@@ -264,9 +285,10 @@ body {
 }
 
 .projets_preview_title {
-    width: max-content;
+    text-align: center;
     margin: auto;
     font-size: 2.3em;
+    line-height: 1.2em;
 }
 
 .projets_preview_list {
@@ -416,9 +438,10 @@ body {
 }
 
 .projets_main_title {
-    width: max-content;
+    text-align: center;
     margin: auto;
     font-size: 2.3em;
+    line-height: 1.2em;
 }
 
 .projets_main_list {
@@ -489,9 +512,10 @@ body {
 }
 
 .projets_all_title {
-    width: max-content;
+    text-align: center;
     margin: auto;
     font-size: 2.3em;
+    line-height: 1.2em;
 }
 
 .projets_all_list {
