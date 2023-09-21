@@ -174,7 +174,8 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    max-width: 250px;
+    width: 250px;
+    flex-grow: 2;
 }
 
 .team_preview_member_name {
@@ -257,6 +258,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    max-width: 500px;
 }
 
 .competence_description {
@@ -292,10 +294,30 @@ body {
 }
 
 .projets_preview_list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    /*display: grid;
+    grid-template-columns: 1fr 1fr;*/
     width: 90%;
     margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.projets_preview_projet:nth-child(1) {
+    border-right: var(--darker) solid 1px;
+}
+
+@media only screen and (max-width: 576px) {
+    .projets_preview_list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .projets_preview_projet:nth-child(1) {
+        border: 0;
+        border-bottom: var(--darker) solid 1px;
+    }
 }
 
 .projets_preview_projet {
@@ -303,11 +325,7 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    padding: 0px 15%;
-}
-
-.projets_preview_projet:nth-child(1) {
-    border-right: var(--darker) solid 1px;
+    padding: 0px 9% 30px;
 }
 
 .projets_preview_projet_img {
@@ -445,10 +463,30 @@ body {
 }
 
 .projets_main_list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    /*display: grid;
+    grid-template-columns: 1fr 1fr;*/
     width: 90%;
     margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.projets_main_projet:nth-child(1) {
+    border-right: var(--darker) solid 1px;
+}
+
+@media only screen and (max-width: 576px) {
+    .projets_main_list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .projets_main_projet:nth-child(1) {
+        border: 0;
+        border-bottom: var(--darker) solid 1px;
+    }
 }
 
 .projets_main_projet {
@@ -456,11 +494,7 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    padding: 0px 15%;
-}
-
-.projets_main_projet:nth-child(1) {
-    border-right: var(--darker) solid 1px;
+    padding: 0px 9% 30px;
 }
 
 .projets_main_projet_img {
