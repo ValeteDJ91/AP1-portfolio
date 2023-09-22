@@ -376,6 +376,9 @@ body {
     /*display: grid;
     grid-template-columns: 0.45fr 1fr;*/
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
     height: 17em;
     column-gap: 10px;
     border-top: var(--darker) 1px solid;
@@ -390,6 +393,14 @@ body {
     flex-flow: row-reverse;
 }
 
+@media only screen and (max-width: 576px) {
+    .membre, .membre:nth-child(even) {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0px;
+    }
+}
+
 .membre_img {
     height: 100%;
     width: 25%;
@@ -398,6 +409,13 @@ body {
     background-position: center;
     min-width: 14em;
     max-width: 24em;
+}
+
+@media only screen and (max-width: 576px) {
+    .membre_img {
+        height: 15em;
+        width: 80%;
+    }
 }
 
 .membre_infos {
@@ -414,6 +432,12 @@ body {
     align-items: flex-end;
 }
 
+@media only screen and (max-width: 576px) {
+    .membre_infos, .membre:nth-child(even) .membre_infos {
+        align-items: center;
+    }
+}
+
 .membre_name {
     margin: 0px;
 }
@@ -425,6 +449,13 @@ body {
 
 .membre:nth-child(even) .membre_description {
     text-align: end;
+}
+
+@media only screen and (max-width: 576px) {
+    .membre_description, .membre:nth-child(even) .membre_description {
+        text-align: center;
+        margin-bottom: 10px;
+    }
 }
 
 .membre_action_list {
